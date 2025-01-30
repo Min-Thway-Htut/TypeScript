@@ -28,12 +28,12 @@ function calculateTax(income: number, taxTear = 2022): number{
     }
 }
 
-
-let employee: {
-    id: number,
-    name: string,
-    retire: (date: Date) => void
-} = {id: 1, name: "John", retire: (date: Date) => 
-    console.log(date)
-};
-employee.name = "Mosh";
+function kgToTbs(weight: number | string): number {
+    if (typeof weight === "number") {
+        return weight * 2.2;
+    }else {
+        return parseFloat(weight) * 2.2;
+    }
+}
+kgToTbs(10);
+kgToTbs("10");
